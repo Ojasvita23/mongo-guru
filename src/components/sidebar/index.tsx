@@ -3,8 +3,8 @@
 import { useState } from "react";
 
 import Logo from "../logo";
-import { colors } from "@/app/themes/colors";
-import { topics } from "@/app/data/topics";
+import { colors } from "@/themes/colors";
+import { topics } from "@/data/topics";
 import { NavItem } from "./NavItem";
 
 const Sidebar = () => {

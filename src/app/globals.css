@@ -4,6 +4,13 @@
   --background: #ffffff;
   --foreground: #171717;
   --purple-dark: #5D00FF;
+  --success-dark: #00BF63;
+  --neutral-darkest: #1A1E2C;
+  --neutral-lightest: #F5F5F7;
+  --grey-white: #ffffff;
+  --grey-grey6: #666666;
+  --grey-grey3: #333333;
+  --grey-grey13: #DDDDDD;
 }
 
 @theme inline {

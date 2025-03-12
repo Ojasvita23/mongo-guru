@@ -1,20 +1,29 @@
-const topics = {
-  introduction: "This is an introduction to MongoDB.",
-  "crud-operations":
-    "Learn how to perform Create, Read, Update, and Delete operations in MongoDB.",
-  aggregation: "Understand MongoDB aggregation framework for data processing.",
-  indexes: "Indexes in MongoDB improve query performance.",
-  replication: "MongoDB replication ensures high availability.",
-  sharding: "Sharding in MongoDB helps distribute large datasets.",
-};
+import { data } from "@/data/topicData";
+import { colors } from "@/themes/colors";
+import { capitalizeFirstLetter } from "@/utils/textFormatting";
+import "./styles.css";
 
-const TopicPage = ({ params }: { params: { slug: string } }) => {
-  const content = topics[params.slug as keyof typeof topics];
+const TopicPage = async ({
+  params,
+  ...props
+}: {
+  params: Promise<{ slug: string }>;
+}) => {
+  const slug = (await params).slug;
+  const content = data[slug as keyof typeof data];
+
+  const heading = capitalizeFirstLetter(slug.replace("-", " "));
 
   return (
-    <div>
-      <h1>{params.slug.replace("-", " ")}</h1>
-      <p>{content}</p>
+    <div className="container">
+      <div className="container__header">
+        <h1 className="container__header__text">{heading}</h1>
+      </div>
+      <div className="container__body">
+        <div className="container__body__content">
+          <p>{content}</p>
+        </div>
+      </div>
     </div>
   );
 };

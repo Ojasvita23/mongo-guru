@@ -1,4 +1,4 @@
-import { colors } from "@/app/themes/colors";
+import { colors } from "@/themes/colors";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
