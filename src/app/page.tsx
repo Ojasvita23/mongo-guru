@@ -1,5 +1,10 @@
-import Image from "next/image";
-
 export default function Home() {
-  return <div className="">hello</div>;
+  return (
+    // <Layout>
+    <div>
+      <h1>Welcome to MongoDB Practice</h1>
+      <p>Select a topic from the sidebar to get started.</p>
+    </div>
+    // </Layout>
+  );
 }
