@@ -1,32 +1,14 @@
 "use client";
 
-import { colors } from "@/app/themes/colors";
-import Link from "next/link";
 import { useState } from "react";
-import Logo from "../logo";
 
-const topics = [
-  { name: "Introduction", slug: "introduction" },
-  { name: "CRUD Operations", slug: "crud-operations" },
-  { name: "Aggregation", slug: "aggregation" },
-  { name: "Indexes", slug: "indexes" },
-  { name: "Replication", slug: "replication" },
-  { name: "Sharding", slug: "sharding" },
-  // { name: "Sharding2", slug: "sharding2" },
-  // { name: "Sharding3", slug: "sharding3" },
-  // { name: "Sharding4", slug: "sharding4" },
-  // { name: "Sharding5", slug: "sharding5" },
-  // { name: "Sharding6", slug: "sharding6" },
-  // { name: "Sharding7", slug: "sharding7" },
-  // { name: "Sharding8", slug: "sharding8" },
-  // { name: "Sharding9", slug: "sharding9" },
-  // { name: "Sharding10", slug: "sharding10" },
-  // { name: "Sharding11", slug: "sharding11" },
-  // { name: "Sharding12", slug: "sharding12" },
-];
+import Logo from "../logo";
+import { colors } from "@/app/themes/colors";
+import { topics } from "@/app/data/topics";
+import { NavItem } from "./NavItem";
 
 const Sidebar = () => {
-  const [active, setActive] = useState(topics[0].slug);
+  const [activePath, setActivePath] = useState([topics[0].slug]);
 
   return (
     <div
@@ -60,17 +42,12 @@ const Sidebar = () => {
       >
         {topics.map((topic) => {
           return (
-            <Link key={topic.slug} href={`/topics/${topic.slug}`}>
-              <li
-                style={{
-                  padding: "16px 32px",
-                  backgroundColor:
-                    active === topic?.slug ? colors.purple.dark : "",
-                }}
-              >
-                <span onClick={() => setActive(topic.slug)}>{topic.name}</span>
-              </li>
-            </Link>
+            <NavItem
+              key={topic.slug}
+              item={topic}
+              activePath={activePath}
+              setActivePath={setActivePath}
+            />
           );
         })}
       </ul>
