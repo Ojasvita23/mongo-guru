@@ -28,17 +28,14 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        style={{
+          border: "1px solid blue",
+          flex: 1,
+          display: "flex",
+        }}
       >
-        <div style={{ display: "flex", flexDirection: "row" }}>
-          <div
-            style={{
-              border: `1px solid ${colors.neutral.darkest}`,
-            }}
-          >
-            <Sidebar />
-          </div>
-          <div>{children}</div>
-        </div>
+        <Sidebar />
+        <div style={{flex: 1}}>{children}</div>
       </body>
     </html>
   );

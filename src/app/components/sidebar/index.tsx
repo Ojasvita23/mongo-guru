@@ -35,11 +35,14 @@ const Sidebar = () => {
         color: colors.grey.white,
         width: "300px",
         height: "100vh",
+        flexDirection: "column",
+        display: "flex",
       }}
     >
       <div
         style={{
           padding: "32px 0",
+          marginBottom: "32px",
           borderBottom: `1px solid ${colors.grey.white}`,
         }}
       >
@@ -49,7 +52,14 @@ const Sidebar = () => {
           MongoDB Topics
         </h2>
       </div>
-      <ul style={{ marginTop: "32px" }}>
+      <ul
+        style={{
+        // padding: "32px 0",
+          border: "1px solid red",
+          overflow: "auto",
+          flexGrow: 1,
+        }}
+      >
         {topics.map((topic) => {
           return (
             <Link key={topic.slug} href={`/topics/${topic.slug}`}>
@@ -67,11 +77,9 @@ const Sidebar = () => {
           flexDirection: "row",
           alignItems: "center",
           gap: 16,
-          position: "fixed",
-          bottom: 0,
+          marginTop: "32px",
           padding: "16px 32px",
           borderTop: `1px solid ${colors.grey.white}`,
-          width: "300px",
         }}
       >
         <Logo />
