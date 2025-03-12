@@ -55,7 +55,6 @@ const Sidebar = () => {
       <ul
         style={{
         // padding: "32px 0",
-          border: "1px solid red",
           overflow: "auto",
           flexGrow: 1,
         }}

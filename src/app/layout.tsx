@@ -29,7 +29,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         style={{
-          border: "1px solid blue",
           flex: 1,
           display: "flex",
         }}
