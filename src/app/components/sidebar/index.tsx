@@ -54,7 +54,6 @@ const Sidebar = () => {
       </div>
       <ul
         style={{
-        // padding: "32px 0",
           overflow: "auto",
           flexGrow: 1,
         }}
@@ -62,7 +61,13 @@ const Sidebar = () => {
         {topics.map((topic) => {
           return (
             <Link key={topic.slug} href={`/topics/${topic.slug}`}>
-              <li style={{ padding: "16px 32px" }}>
+              <li
+                style={{
+                  padding: "16px 32px",
+                  backgroundColor:
+                    active === topic?.slug ? colors.purple.dark : "",
+                }}
+              >
                 <span onClick={() => setActive(topic.slug)}>{topic.name}</span>
               </li>
             </Link>
