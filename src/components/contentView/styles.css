@@ -30,7 +30,7 @@
   padding: 26px 32px;
   background-color: var(--grey-white);
   border-radius: 8px;
-  flex-grow: 1;
+  flex: 1;
   overflow: auto;
   box-shadow: 2px 2px 10px var(--grey-grey13);
 }
@@ -42,7 +42,7 @@
 
 .container__body__footer__button {
   padding: 12px 24px;
-  background-color: var(--purple-dark);
+  background-color: var(--purple-darkest);
   color: var(--grey-white);
   border-radius: 8px;
   cursor: pointer;
@@ -50,5 +50,5 @@
 }
 
 .container__body__footer__button:hover {
-  background-color: var(--purple-darkest);
+  background-color: var(--purple-dark);
 }

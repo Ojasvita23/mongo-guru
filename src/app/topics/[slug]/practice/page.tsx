@@ -8,6 +8,7 @@ import { text } from "@/constants/text";
 import { capitalizeFirstLetter } from "@/utils/textFormatting";
 import { questions } from "./constants";
 import "./styles.css";
+import Link from "next/link";
 
 const QuestionsList = ({ params }: { params: { slug: string } }) => {
   const [slug, setSlug] = useState<string>("");
@@ -29,9 +30,14 @@ const QuestionsList = ({ params }: { params: { slug: string } }) => {
     return (
       <>
         <h2 className="container__body__content__heading">{text.questions}</h2>
-        <ol start={1}>
+        <ol start={1} className="container__body__content__questionsList">
           {questions.map((question) => (
-            <li key={question.id}>{question.question}</li>
+            <Link
+              className="container__body__content__questionsList__item"
+              href={`/topics/${slug}/practice/${question.id}`}
+            >
+              <li key={question.id}>{question.question}</li>
+            </Link>
           ))}
         </ol>
       </>
@@ -43,7 +49,7 @@ const QuestionsList = ({ params }: { params: { slug: string } }) => {
       heading={heading}
       content={content()}
       buttonText="Back to Theory"
-        buttonOnClick={() => router.back()}
+      buttonOnClick={() => router.back()}
     />
   );
 };

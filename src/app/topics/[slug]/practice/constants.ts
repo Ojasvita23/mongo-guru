@@ -1,7 +1,8 @@
 export const questions = [
   {
     id: 1,
-    question: "What is the capital of France?",
+    question:
+      "What is the capital of France? What is the capital of France? What is the capital of France? What is the capital of France? What is the capital of France?What is the capital of France?What is the capital of France?What is the capital of France?What is the capital of France?What is the capital of France?What is the capital of France?",
   },
   {
     id: 2,
@@ -42,5 +43,13 @@ export const questions = [
   {
     id: 11,
     question: "What is the capital of Australia?",
+  },
+  {
+    id: 12,
+    question: "What is the capital of South Africa?",
+  },
+  {
+    id: 13,
+    question: "What is the capital of Egypt?",
   },
 ];

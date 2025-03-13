@@ -2,3 +2,19 @@
   font-size: 24px;
   font-weight: bold;
 }
+
+.container__body__content__questionsList {
+  list-style-type: decimal;
+  margin: 24px 0 0 0;
+  padding-left: 24px;
+  overflow: auto;
+  max-height: 90%;
+}
+
+.container__body__content__questionsList__item {
+  padding: 0 24px 12px 24px;
+}
+
+.container__body__content__questionsList__item:hover {
+  color: var(--purple-dark);
+}
