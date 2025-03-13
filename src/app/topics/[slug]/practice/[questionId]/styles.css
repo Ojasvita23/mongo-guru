@@ -1,0 +1,121 @@
+.questionPage {
+  background-color: var(--grey-white);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  gap: 24px;
+}
+
+.questionPage__heading {
+  padding: 24px;
+  border-bottom: 1px solid var(--grey-grey13);
+  font-weight: bold;
+}
+
+.questionPage__body {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.questionPage__body__left {
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+  gap: 24px;
+}
+
+.questionPage__body__left__heading {
+  padding: 12px 24px;
+  font-weight: bold;
+}
+
+.questionPage__body__left__content {
+  flex-grow: 1;
+  margin: 0 24px;
+  box-shadow: 0 0 10px var(--purple-lightest);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.questionPage__body__left__btn__container {
+  padding: 0 0 24px 24px;
+}
+
+.questionPage__body__left__button {
+  background-color: var(--purple-darkest);
+  color: var(--grey-white);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.questionPage__body__left__button:hover {
+  background-color: var(--purple-dark);
+  cursor: pointer;
+}
+
+.questionPage__body__right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+}
+
+.questionPage__body__right__btn__container {
+  padding: 0 0 24px 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.questionPage__body__button__reset {
+  background-color: var(--grey-grey6);
+  color: var(--grey-white);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.questionPage__body__button__reset:hover {
+  cursor: pointer;
+}
+
+.questionPage__body__button__submit {
+  background-color: var(--success-dark);
+  color: var(--grey-white);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.questionPage__body__button__submit:hover {
+  cursor: pointer;
+}
+
+.questionPage__body__right__content {
+  flex: 1;
+  padding: 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.questionPage__body__right__content__input {
+  flex: 1;
+  flex-direction: column;
+}
+
+.questionPage__body__right__content__output {
+  padding: 12px;
+  flex: 1;
+  border: 1px solid var(--grey-grey13);
+  border-radius: 8px;
+  box-shadow: 0 0 10px var(--purple-lightest);
+}
+
+.textarea {
+  background-color: var(--neutral-darkest);
+  color: var(--grey-white);
+  padding: 12px;
+  border-radius: 8px;
+}
