@@ -1,4 +1,4 @@
-/* .container {
+.container {
   background-color: var(--neutral-lightest);
   display: flex;
   flex-direction: column;
@@ -9,13 +9,14 @@
   padding: 26px 32px;
   border-bottom: 1px solid #e0e0e0;
   background-color: var(--grey-white);
+  min-height: 89px;
 }
 
 .container__header__text {
   font-size: 24px;
   font-weight: bold;
-} */
-/* 
+}
+
 .container__body {
   padding: 32px;
   display: flex;
@@ -50,4 +51,4 @@
 
 .container__body__footer__button:hover {
   background-color: var(--purple-darkest);
-} */
+}
