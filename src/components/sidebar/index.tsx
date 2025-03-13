@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import Logo from "../logo";
 import { colors } from "@/themes/colors";
-import { topics } from "@/data/topics";
+import { topics } from "@/constants/topics";
 import { NavItem } from "./NavItem";
 
 const Sidebar = () => {

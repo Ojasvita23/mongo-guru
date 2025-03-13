@@ -1,14 +1,9 @@
-import { data } from "@/data/topicData";
-import { colors } from "@/themes/colors";
+import { data } from "@/constants/topicData";
 import { capitalizeFirstLetter } from "@/utils/textFormatting";
 import "./styles.css";
+import { text } from "@/constants/text";
 
-const TopicPage = async ({
-  params,
-  ...props
-}: {
-  params: Promise<{ slug: string }>;
-}) => {
+const TopicPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const slug = (await params).slug;
   const content = data[slug as keyof typeof data];
 
@@ -22,6 +17,11 @@ const TopicPage = async ({
       <div className="container__body">
         <div className="container__body__content">
           <p>{content}</p>
+        </div>
+        <div className="container__body__footer">
+          <button className="container__body__footer__button">
+            <span>{text.practice}</span>
+          </button>
         </div>
       </div>
     </div>

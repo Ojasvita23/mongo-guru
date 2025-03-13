@@ -1,6 +1,7 @@
 export const colors = {
   purple: {
     dark: "#5D00FF",
+    darkest: "#4b49b8",
   },
   success: {
     dark: "#00BF63",
