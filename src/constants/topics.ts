@@ -79,7 +79,7 @@ export const topics = [
     slug: "aggregation-framework",
     children: [
       { name: "Pipeline Concept", slug: "pipeline-concept" },
-      { name: "$match and $project Stages", slug: "$match-and-$project-stages" },
+      { name: "$match and $project Stages", slug: "match-and-project-stages" },
       { name: "Grouping and Sorting ($group, $sort)", slug: "grouping-and-sorting" },
       { name: "Array Operations ($unwind)", slug: "array-operations" },
       { name: "Joins ($lookup)", slug: "joins" },
