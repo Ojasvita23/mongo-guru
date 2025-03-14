@@ -1,0 +1,179 @@
+1. Introduction to MongoDB
+
+What is NoSQL
+MongoDB vs. Relational Databases
+BSON Document Format
+MongoDB Architecture
+Installation and Setup
+MongoDB Shell Basics
+
+2. CRUD Operations
+
+Create Documents (insertOne, insertMany)
+Read Documents (find, findOne)
+Update Documents (updateOne, updateMany, replaceOne)
+Delete Documents (deleteOne, deleteMany)
+Bulk Write Operations
+
+3. Query Operators
+
+Comparison Operators ($eq, $gt, $lt, $gte, $lte, $ne, $in, $nin)
+Logical Operators ($and, $or, $not, $nor)
+Element Operators ($exists, $type)
+Evaluation Operators ($regex, $expr, $jsonSchema)
+Array Operators ($all, $elemMatch, $size)
+Bitwise Operators
+Projection Operators
+
+4. Document Structure and Schema Design
+
+Flexible Schema Concepts
+Document Size Limitations
+Field Names and Values
+Embedded Documents
+Document Validation
+Schema Versioning Strategies
+
+5. Indexing and Performance
+
+Single Field Indexes
+Compound Indexes
+Multikey Indexes
+Text Indexes
+Geospatial Indexes
+Hashed Indexes
+Index Properties and Options
+Index Intersection
+Covered Queries
+Index Usage Analysis
+Explain Plans
+
+6. Aggregation Framework
+
+Pipeline Concept
+$match and $project Stages
+Grouping and Sorting ($group, $sort)
+Array Operations ($unwind)
+Joins ($lookup)
+Window Functions
+Accumulators and Expressions
+Aggregation Pipeline Optimization
+Facets
+Set Operations
+
+7. Data Modeling
+
+Embedding vs. Referencing
+One-to-One Relationships
+One-to-Many Relationships
+Many-to-Many Relationships
+Tree and Graph Structures
+Polymorphic Patterns
+Schema Versioning
+Time Series Data Modeling
+Catalog/Product Data Modeling
+Multi-tenant Patterns
+
+8. Transactions
+
+ACID Properties in MongoDB
+Multi-document Transactions
+Distributed Transactions
+Transaction Lifecycle
+Error Handling and Retries
+Performance Considerations
+
+9. Replication
+
+Replica Set Architecture
+Primary/Secondary Nodes
+Elections and Failover
+Read Preference
+Write Concern
+Oplog
+Replica Set Monitoring
+Replica Set Security
+
+10. Sharding
+
+Sharding Architecture
+Shard Keys and Choosing Strategy
+Chunks and Balancing
+Config Servers and mongos
+Zones and Zone Ranges
+Shard Key Limitations and Design
+Monitoring Sharded Clusters
+Sharding Administration
+
+11. Security
+
+Authentication Methods
+Role-Based Access Control
+Transport Encryption (TLS/SSL)
+Auditing
+Field Level Encryption
+Client-Side Field Level Encryption
+Security Checklist
+External Authentication
+
+12. MongoDB Atlas
+
+Atlas Setup and Configuration
+Atlas Tiers and Scaling
+Performance Advisor
+Data Explorer
+Atlas Search
+Online Archive
+Atlas Security Features
+Monitoring and Alerts
+Backup and Restore
+
+13. Working with MongoDB in Node.js
+
+MongoDB Node.js Driver
+Connection Pooling
+CRUD Operations in Node.js
+Promises vs Callbacks
+Error Handling
+Transactions in Node.js
+Pagination Patterns
+Mongoose ODM Basics
+Mongoose Schemas and Models
+Mongoose Middleware
+
+14. TypeScript with MongoDB
+
+Type Definitions
+Interfaces for Documents
+Generic Types
+MongoDB with TypeScript Best Practices
+Type-Safe Queries
+
+15. MongoDB with React/Next.js
+
+Data Fetching Patterns
+State Management with MongoDB Data
+SWR/React Query with MongoDB
+Next.js API Routes for MongoDB
+Server-Side Rendering with MongoDB
+Incremental Static Regeneration
+
+16. Advanced Performance Topics
+
+Query Optimization
+Memory Usage and Cache
+Working Set Management
+Disk I/O Optimization
+Connection Pooling Tuning
+Read/Write Distribution
+Hardware Considerations
+Performance Testing Methodologies
+
+17. Change Streams
+
+Setting Up Change Streams
+Filtering Events
+Resume Tokens
+Handling Stream Closure
+Change Stream with Aggregation
+Production Patterns
