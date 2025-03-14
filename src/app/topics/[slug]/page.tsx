@@ -36,6 +36,7 @@ const TopicPage = ({ params }: { params: Promise<{ slug: string }> }) => {
       heading={heading}
       content={content}
       buttonText={text.practice}
+      isMarkdown={true}
       buttonOnClick={() => router.push(`${pathname}/practice`)}
     />
   );
