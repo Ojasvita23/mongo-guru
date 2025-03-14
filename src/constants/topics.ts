@@ -25,6 +25,7 @@ export const topics = [
       { name: "Update Documents (updateOne, updateMany, replaceOne)", slug: "update-documents" },
       { name: "Delete Documents (deleteOne, deleteMany)", slug: "delete-documents" },
       { name: "Bulk Write Operations", slug: "bulk-write-operations" },
+      { name: "Integration with Express/Node.js", slug: "integration-with-express-node" },
     ],
   },
   // 3
