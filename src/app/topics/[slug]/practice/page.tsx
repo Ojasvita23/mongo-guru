@@ -6,12 +6,13 @@ import { useRouter } from "next/navigation";
 import { ContentView } from "@/components/contentView";
 import { text } from "@/constants/text";
 import { capitalizeFirstLetter } from "@/utils/textFormatting";
-import { questions } from "./constants";
 import "./styles.css";
 import Link from "next/link";
+import { IQuestion } from "@/backend/models/types";
 
 const QuestionsList = ({ params }: { params: { slug: string } }) => {
   const [slug, setSlug] = useState<string>("");
+  const [questions, setQuestions] = useState<IQuestion[]>([]);
   const router = useRouter();
 
   useEffect(() => {
@@ -19,6 +20,12 @@ const QuestionsList = ({ params }: { params: { slug: string } }) => {
       const resolvedParams = await params;
       const slugValue = resolvedParams.slug;
       setSlug(slugValue);
+
+      const response = await fetch(`/api/questions?topicId=${slugValue}`);
+      const data = await response.json();
+      if (data.success) {
+        setQuestions(data.data);
+      }
     };
 
     fetchData();
