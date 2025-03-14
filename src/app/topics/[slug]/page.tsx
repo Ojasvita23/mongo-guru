@@ -19,8 +19,11 @@ const TopicPage = ({ params }: { params: Promise<{ slug: string }> }) => {
     const fetchData = async () => {
       const resolvedParams = await params;
       const slugValue = resolvedParams.slug;
+      const response = await fetch(`/api/topic?topic=${slugValue}`);
+      const data = await response.json();
       setSlug(slugValue);
-      setContent(data[slugValue as keyof typeof data]);
+
+      setContent(data.content || "Topic not found.");
     };
 
     fetchData();

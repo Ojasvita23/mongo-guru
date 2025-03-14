@@ -1,5 +1,9 @@
 import React, { ReactElement } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+
 import "./styles.css";
+import MarkdownRenderer from "../markdown";
 
 export const ContentView = ({
   heading,
@@ -9,7 +13,7 @@ export const ContentView = ({
 }: {
   heading: string;
   children?: ReactElement;
-  content?: string | ReactElement;
+  content?: any;
   buttonText?: string;
   buttonOnClick?: () => void;
 }) => {
@@ -20,7 +24,7 @@ export const ContentView = ({
       </div>
       <div className="container__body">
         <div className="container__body__content">
-          {content}
+          <MarkdownRenderer content={content} />
         </div>
         <div className="container__body__footer">
           <button
