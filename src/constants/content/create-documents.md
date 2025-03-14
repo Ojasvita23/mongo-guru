@@ -2,7 +2,7 @@
 
 &nbsp;  
 
-### **insertOne()** - Inserts a single document into a collection:  
+### `insertOne()` - Inserts a single document into a collection:  
 
 &nbsp;  
 
@@ -16,7 +16,7 @@ await db.collection('users').insertOne({
 
 &nbsp;  
 
-### **insertMany()** - Inserts multiple documents in one operation:  
+### `insertMany()` - Inserts multiple documents in one operation:  
 
 &nbsp;  
 
