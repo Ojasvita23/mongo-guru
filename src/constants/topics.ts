@@ -104,7 +104,7 @@ export const topics = [
       { name: "Schema Versioning", slug: "schema-versioning" },
       { name: "Time Series Data Modeling", slug: "time-series-data-modeling" },
       { name: "Catalog/Product Data Modeling", slug: "catalog-product-data-modeling" },
-      { name: "Multi-tenant Patterns", slug: "multi-tenant-atterns" },
+      { name: "Multi-tenant Patterns", slug: "multi-tenant-patterns" },
     ],
   },
   // 8
