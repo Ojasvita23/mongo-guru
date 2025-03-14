@@ -1,12 +1,26 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 import "./styles.css";
 
-const QuestionPage = () => {
+const QuestionPage = ({
+  params,
+}: {
+  params: { slug: string; questionId: string };
+}) => {
   const router = useRouter();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const resolvedParams = await params;
+      console.log("resolvedParams = ", resolvedParams);
+      const questionId = resolvedParams?.questionId;
+    };
+
+    fetchData();
+  }, [params]);
 
   return (
     <div className="questionPage">

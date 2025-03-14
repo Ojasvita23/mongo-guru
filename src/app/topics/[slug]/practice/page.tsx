@@ -41,7 +41,7 @@ const QuestionsList = ({ params }: { params: { slug: string } }) => {
           {questions.map((question) => (
             <Link
               className="container__body__content__questionsList__item"
-              href={`/topics/${slug}/practice/${question.id}`}
+              href={`/topics/${slug}/practice/${question._id}`}
             >
               <li key={question.id}>{question.question}</li>
             </Link>
