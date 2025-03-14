@@ -103,6 +103,8 @@ export const topics = [
       { name: "Polymorphic Patterns", slug: "polymorphic-patterns" },
       { name: "Schema Versioning", slug: "schema-versioning" },
       { name: "Time Series Data Modeling", slug: "time-series-data-modeling" },
+      { name: "Catalog/Product Data Modeling", slug: "catalog-product-data-modeling" },
+      { name: "Multi-tenant Patterns", slug: "multi-tenant-atterns" },
     ],
   },
   // 8
