@@ -10,11 +10,12 @@ export const ContentView = ({
   content,
   buttonText,
   buttonOnClick,
+  isMarkdown,
 }: {
   heading: string;
-  children?: ReactElement;
   content?: any;
   buttonText?: string;
+  isMarkdown?: boolean;
   buttonOnClick?: () => void;
 }) => {
   return (
@@ -24,7 +25,11 @@ export const ContentView = ({
       </div>
       <div className="container__body">
         <div className="container__body__content">
-          <MarkdownRenderer content={content} />
+          {isMarkdown ? (
+            <MarkdownRenderer content={content} />
+          ) : (
+            content
+          )}
         </div>
         <div className="container__body__footer">
           <button
