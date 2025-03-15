@@ -25,6 +25,7 @@ export const topics = [
       { name: "Update Documents (updateOne, updateMany, replaceOne)", slug: "update-documents" },
       { name: "Delete Documents (deleteOne, deleteMany)", slug: "delete-documents" },
       { name: "Bulk Write Operations", slug: "bulk-write-operations" },
+      { name: "Integration with Express/Node.js", slug: "integration-with-express-node" },
     ],
   },
   // 3
@@ -78,7 +79,7 @@ export const topics = [
     slug: "aggregation-framework",
     children: [
       { name: "Pipeline Concept", slug: "pipeline-concept" },
-      { name: "$match and $project Stages", slug: "$match-and-$project-stages" },
+      { name: "$match and $project Stages", slug: "match-and-project-stages" },
       { name: "Grouping and Sorting ($group, $sort)", slug: "grouping-and-sorting" },
       { name: "Array Operations ($unwind)", slug: "array-operations" },
       { name: "Joins ($lookup)", slug: "joins" },
@@ -102,6 +103,8 @@ export const topics = [
       { name: "Polymorphic Patterns", slug: "polymorphic-patterns" },
       { name: "Schema Versioning", slug: "schema-versioning" },
       { name: "Time Series Data Modeling", slug: "time-series-data-modeling" },
+      { name: "Catalog/Product Data Modeling", slug: "catalog-product-data-modeling" },
+      { name: "Multi-tenant Patterns", slug: "multi-tenant-patterns" },
     ],
   },
   // 8
