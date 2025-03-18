@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 import "./styles.css";
@@ -11,12 +11,11 @@ const QuestionPage = ({
   params: { slug: string; questionId: string };
 }) => {
   const router = useRouter();
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
-      const resolvedParams = await params;
-      console.log("resolvedParams = ", resolvedParams);
-      const questionId = resolvedParams?.questionId;
+      console.log("resolvedParams = ", params);
     };
 
     fetchData();
@@ -39,9 +38,7 @@ const QuestionPage = ({
           <div className="questionPage__body__left__btn__container">
             <button
               className="questionPage__body__left__button"
-              onClick={() => {
-                router.back();
-              }}
+              onClick={() => router.back()}
             >
               <span>Back to Questions</span>
             </button>
@@ -61,6 +58,8 @@ const QuestionPage = ({
                   name="postContent"
                   rows={10}
                   cols={70}
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
                 />
               </label>
             </div>
@@ -72,16 +71,14 @@ const QuestionPage = ({
           <div className="questionPage__body__right__btn__container">
             <button
               className="questionPage__body__button__reset"
-              onClick={() => {
-                console.log("reset clicked");
-              }}
+              onClick={() => setQuery("")}
             >
               <span>Reset</span>
             </button>
             <button
               className="questionPage__body__button__submit"
               onClick={() => {
-                console.log("submit clicked");
+                console.log("Submitted Query:", query);
               }}
             >
               <span>Submit</span>
